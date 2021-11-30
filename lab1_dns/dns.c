@@ -54,8 +54,8 @@ unsigned int HashFunction(char* str)
 		i++;
 	}
 
-	//return abs(hash % (MAX_HASH_TABLE_KEY_VALUE + 1));
-	return (CalcHashModByHash(abs(hash)));		//use hash mod to avoid accessing array out of bounds
+	//return abs(hash % (MAX_HASH_TABLE_KEY_VALUE + 1));	//use hash mod to avoid accessing array out of bounds
+	return CalcHashModByHash(abs(hash));		
 }
 
 int CalcHashModByHash(int hash)
